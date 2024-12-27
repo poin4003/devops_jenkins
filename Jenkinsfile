@@ -4,8 +4,8 @@ pipeline {
     environment {
         DOCKER_IMAGE = '400034/express_backend'
         DOCKER_TAG = 'latest'
-        TELEGRAM_BOT_TOKEN = '7616316349:AAHdwbtNafUfIRzKB05ejgfbHkiLw2CTWbw'
-        TELEGRAM_CHAT_ID = '-4780693568'
+        // TELEGRAM_BOT_TOKEN = '7616316349:AAHdwbtNafUfIRzKB05ejgfbHkiLw2CTWbw'
+        // TELEGRAM_CHAT_ID = '-4780693568'
     }
 
     stages {
@@ -56,20 +56,20 @@ pipeline {
             cleanWs()
         }
 
-        success {
-            sendTelegramMessage("✅ Build #${BUILD_NUMBER} was successful! ✅")
-        }
+        // success {
+        //     sendTelegramMessage("✅ Build #${BUILD_NUMBER} was successful! ✅")
+        // }
 
-        failure {
-            sendTelegramMessage("❌ Build #${BUILD_NUMBER} failed. ❌")
-        }
+        // failure {
+        //     sendTelegramMessage("❌ Build #${BUILD_NUMBER} failed. ❌")
+        // }
     }
 }
 
-def sendTelegramMessage(String message) {
-    sh """
-    curl -s -X POST https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage \
-    -d chat_id=${TELEGRAM_CHAT_ID} \
-    -d text="${message}"
-    """
-}
+// def sendTelegramMessage(String message) {
+//     sh """
+//     curl -s -X POST https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage \
+//     -d chat_id=${TELEGRAM_CHAT_ID} \
+//     -d text="${message}"
+//     """
+// }
