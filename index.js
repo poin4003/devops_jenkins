@@ -4,7 +4,8 @@ const cors = require('cors');
 const app = express();
 
 async function main() {
-  await mongoose.connect('mongodb+srv://PcHuy:1hHnRQtOIxxA6sTZ@cluster0.idi4juk.mongodb.net/devop_mongo?retryWrites=true&w=majority&appName=Cluster0');
+  // await mongoose.connect('mongodb+srv://PcHuy:1hHnRQtOIxxA6sTZ@cluster0.idi4juk.mongodb.net/devop_mongo?retryWrites=true&w=majority&appName=Cluster0');
+  await mongoose.connect('mongodb://mongo:27017/devop_mongo')
 }
 
 var productSchema = new mongoose.Schema({
