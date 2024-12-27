@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = '400034/express_backend'
         DOCKER_TAG = 'latest'
-        TELEGRAM_BOT_TOKEN = '7616316349:AAHdwbtNafUfIRzKB05ejgfbHkiLw2CTWbw'
+        TELEGRAM_BOT_TOKEN = '7768123974:AAEtjMgKOPpBaM6JTR4I9JBP2-xwEdm2BjE'
         TELEGRAM_CHAT_ID = '-4780693568'
     }
 
